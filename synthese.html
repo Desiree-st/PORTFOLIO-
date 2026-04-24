@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Synthèse Complet | Kehasse Ange Desirée</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text: #f1f5f9;
+            --border: #334155;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        
+        nav { display: flex; justify-content: space-between; padding: 1.5rem 10%; background: #0b1120; border-bottom: 1px solid var(--border); }
+        nav a { text-decoration: none; color: #fff; margin-left: 20px; }
+        .active { color: var(--accent); }
+
+        .container { padding: 3rem 5%; }
+        .section-title { text-align: center; margin-bottom: 2rem; color: var(--accent); }
+
+        .table-wrapper { 
+            overflow-x: auto; 
+            background: var(--card-bg); 
+            padding: 1.5rem; 
+            border-radius: 12px; 
+            border: 1px solid var(--border);
+        }
+
+        table { width: 100%; border-collapse: collapse; min-width: 1000px; }
+        th, td { border: 1px solid var(--border); padding: 12px; text-align: center; font-size: 0.9rem; }
+        
+        thead tr:first-child th { background: #1e293b; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+
+        th.vertical { 
+            height: 220px; 
+            writing-mode: vertical-rl; 
+            transform: rotate(180deg); 
+            font-size: 0.8rem;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        .project-name { text-align: left; font-weight: bold; width: 280px; background: rgba(255,255,255,0.02); }
+        .category-row { background: rgba(56, 189, 248, 0.1); font-weight: bold; text-align: left; color: var(--accent); }
+        .check { color: var(--accent); font-weight: bold; font-size: 1.2rem; }
+        
+        footer { text-align: center; padding: 2rem; color: #94a3b8; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight: bold; color: var(--accent);">KAD.dev</div>
+        <div>
+            <a href="index.html">Accueil</a>
+            <a href="competences.html">Compétences</a>
+            <a href="projets.html">Projets</a>
+            <a href="contact.html">Contact</a>
+            <a href="synthese.html" class="active">Synthèse</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="section-title">Tableau de Synthèse des Réalisations</h1>
+        
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Réalisations Professionnelles</th>
+                        <th colspan="6">Compétences du Référentiel (SISR / DevOps)</th>
+                    </tr>
+                    <tr>
+                        <th class="vertical">Gérer le patrimoine informatique (C1)</th>
+                        <th class="vertical">Répondre aux incidents (C7)</th>
+                        <th class="vertical">Développer la présence en ligne (C11)</th>
+                        <th class="vertical">Travailler en mode projet</th>
+                        <th class="vertical">Mettre à disposition des services (C17)</th>
+                        <th class="vertical">Organiser son développement pro (DevOps)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="category-row"><td colspan="7">Projets Actuels - EFREI Paris (BTS SIO)</td></tr>
+                    <tr>
+                        <td class="project-name">Koo2Fourchette (PHP/MySQL)</td>
+                        <td></td><td></td><td class="check">X</td><td class="check">X</td><td></td><td class="check">X</td>
+                    </tr>
+                    <tr>
+                        <td class="project-name">DK Boutique (E-commerce)</td>
+                        <td></td><td></td><td class="check">X</td><td class="check">X</td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="project-name">Supervision Zabbix & Parc GLPI</td>
+                        <td class="check">X</td><td class="check">X</td><td></td><td class="check">X</td><td class="check">X</td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="project-name">Versioning & Déploiement GitHub</td>
+                        <td></td><td></td><td></td><td class="check">X</td><td class="check">X</td><td class="check">X</td>
+                    </tr>
+
+                    <tr class="category-row"><td colspan="7">Expériences Antérieures - Pigier Côte d'Ivoire</td></tr>
+                    <tr>
+                        <td class="project-name">Site Institutionnel Pigier</td>
+                        <td></td><td></td><td class="check">X</td><td class="check">X</td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="project-name">Projet Hydroculture (Vitrine)</td>
+                        <td></td><td></td><td class="check">X</td><td class="check">X</td><td></td><td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>Document de synthèse - Kehasse Ange Desirée - EFREI 2026</p>
+    </footer>
+
+</body>
+</html>

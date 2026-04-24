@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Compétences | Kehasse Ange Desirée</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --devops-color: #8b5cf6; /* Violet pour le DevOps */
+            --success: #10b981;
+            --text: #f1f5f9;
+            --text-dim: #94a3b8;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+
+        nav { display: flex; justify-content: space-between; padding: 1.5rem 10%; background: #0b1120; border-bottom: 1px solid #334155; position: sticky; top: 0; z-index: 100; }
+        nav a { text-decoration: none; color: var(--text); margin-left: 20px; transition: 0.3s; }
+        nav a:hover, .active { color: var(--accent); }
+
+        .container { padding: 4rem 10%; }
+        .section-title { font-size: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--accent); padding-left: 15px; }
+        
+        /* Section Spécifique DevOps */
+        .devops-section {
+            background: linear-gradient(145deg, rgba(139, 92, 246, 0.1), rgba(15, 23, 42, 0));
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            margin-bottom: 4rem;
+        }
+
+        .devops-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            position: relative;
+        }
+
+        .skill-item h3 { margin-top: 0; color: var(--devops-color); font-size: 1.1rem; }
+
+        /* Grille Compétences SIO classiques */
+        .sio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .sio-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .task-list { list-style: none; padding: 0; margin-top: 15px; }
+        .task-list li { margin-bottom: 10px; font-size: 0.9rem; display: flex; align-items: center; }
+        .task-list li::before { content: "→"; color: var(--accent); margin-right: 10px; font-weight: bold; }
+
+        footer { text-align: center; padding: 3rem; color: var(--text-dim); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight: bold; color: var(--accent);">KAD.dev</div>
+        <div>
+           <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="synthese.html">Tableau de synthèse</a></li>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <div class="devops-section">
+            <h2 style="color: var(--devops-color); margin-top: 0;">∞ Culture DevOps & Industrialisation</h2>
+            <p>Maîtrise des outils de collaboration, de versioning et de déploiement automatisé.</p>
+            
+            <div class="devops-card">
+                <div class="skill-item">
+                    <h3>CI/CD & Automatisation</h3>
+                    <ul class="task-list">
+                        <li>Déploiement continu via GitHub Pages</li>
+                        <li>Workflow de validation de code (Pull Requests)</li>
+                        <li>Automatisation des déploiements web</li>
+                    </ul>
+                </div>
+                <div class="skill-item">
+                    <h3>Versioning & Collaboration</h3>
+                    <ul class="task-list">
+                        <li>Gestion de dépôts distants (GitHub/GitLab)</li>
+                        <li>Utilisation avancée de Git (Branching, Merging)</li>
+                        <li>Documentation technique "As Code"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Compétences du Référentiel SIO</h2>
+        
+        <div class="sio-grid">
+            <article class="sio-card">
+                <span class="badge">SISR - Support & Maintenance</span>
+                <h3>Patrimoine & Incidents</h3>
+                <ul class="task-list">
+                    <li>Inventaire automatisé avec GLPI & FusionInventory</li>
+                    <li>Gestion du cycle de vie des incidents (Ticketing)</li>
+                    <li>Configuration d'alertes de supervision (Zabbix)</li>
+                </ul>
+            </article>
+
+            <article class="sio-card">
+                <span class="badge">WEB - Visibilité</span>
+                <h3>Présence en ligne</h3>
+                <ul class="task-list">
+                    <li>Intégration de Google Tag Manager (GTM)</li>
+                    <li>Suivi d'audience avec Google Analytics</li>
+                    <li>Audit SEO et optimisation des métadonnées</li>
+                </ul>
+            </article>
+
+            <article class="sio-card">
+                <span class="badge">INFRA - Services</span>
+                <h3>Déploiement de Services</h3>
+                <ul class="task-list">
+                    <li>Mise en place de serveurs Web (Apache/Nginx)</li>
+                    <li>Gestion des environnements de test vs production</li>
+                    <li>Analyse comparative des solutions d'hébergement</li>
+                </ul>
+            </article>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kehasse Ange Desirée | EFREI Paris - BTS SIO SISR</p>
+    </footer>
+
+</body>
+</html>

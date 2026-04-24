@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Réalisations | Kehasse Ange Desirée</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text: #f1f5f9;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 10%;
+            background: rgba(15, 23, 42, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #334155;
+        }
+
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { text-decoration: none; color: var(--text); transition: 0.3s; }
+        nav a:hover, .active { color: var(--accent); }
+
+        .container { padding: 4rem 10%; }
+        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; }
+
+        /* Grille des projets */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+        }
+
+        .project-image-holder {
+            width: 100%;
+            height: 200px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .project-image-holder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ton image remplira le cadre proprement */
+        }
+
+        .project-content { padding: 1.5rem; }
+        .badge {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .project-content h3 { margin: 1rem 0 0.5rem 0; color: #fff; }
+        .project-content p { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 1rem; }
+
+        .tech-stack { display: flex; gap: 8px; flex-wrap: wrap; }
+        .tech-stack span {
+            background: #334155;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        footer { text-align: center; padding: 2rem; border-top: 1px solid #334155; margin-top: 3rem; color: var(--text-dim); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight: bold; color: var(--accent);">KAD.dev</div>
+        <ul>
+           <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="synthese.html">Tableau de synthèse</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1 class="section-title">Mes Réalisations</h1>
+
+        <div class="projects-grid">
+            
+            <article class="project-card">
+                <div class="project-image-holder">
+                    <img src="image/pigier.png" alt="Capture Site Pigier">
+                </div>
+                <div class="project-content">
+                    <span class="badge">Pigier Côte d'Ivoire</span>
+                    <h3>Site Institutionnel Pigier</h3>
+                    <p>Refonte visuelle et structuration du site de l'établissement. Travail sur l'expérience utilisateur et la présentation des formations.</p>
+                    <div class="tech-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image-holder">
+                    <img src="img/hydroculture.jpg" alt="Capture Site Hydroculture">
+                </div>
+                <div class="project-content">
+                    <span class="badge">Projet Professionnel</span>
+                    <h3>Site d'Hydroculture</h3>
+                    <p>Conception du site vitrine pour une entreprise spécialisée dans l'hydroculture. Mise en avant des produits et services.</p>
+                    <div class="tech-stack"><span>HTML</span><span>CSS</span><span>Bootstrap</span></div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image-holder">
+                    <img src="img/koo2fourchette.jpg" alt="Capture Koo2Fourchette">
+                </div>
+                <div class="project-content">
+                    <span class="badge">EFREI - Full Stack</span>
+                    <h3>Koo2Fourchette</h3>
+                    <p>Application de partage de recettes. Développement du backend PHP, gestion des inscriptions et connexion MySQL.</p>
+                    <div class="tech-stack"><span>PHP</span><span>MySQL</span><span>CSS Grid</span></div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image-holder">
+                    <img src="image/dk.png" alt="Capture DK Boutique">
+                </div>
+                <div class="project-content">
+                    <span class="badge">EFREI - E-commerce</span>
+                    <h3>DK Boutique</h3>
+                    <p>Site de cosmétiques avec panier dynamique. Gestion des sessions PHP pour sauvegarder les choix des utilisateurs.</p>
+                    <div class="tech-stack"><span>PHP</span><span>Sessions</span><span>JavaScript</span></div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image-holder">
+                    <img src="img/zabbix.jpg" alt="Capture Supervision">
+                </div>
+                <div class="project-content">
+                    <span class="badge">BTS SIO SISR</span>
+                    <h3>Supervision & Infrastructure</h3>
+                    <p>Mise en place de Zabbix et GLPI. Surveillance des services réseau et gestion automatisée du parc informatique.</p>
+                    <div class="tech-stack"><span>Zabbix</span><span>GLPI</span><span>Linux Server</span></div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kehasse Ange Desirée - EFREI Paris</p>
+    </footer>
+
+</body>
+</html>
