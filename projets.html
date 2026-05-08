@@ -52,6 +52,8 @@
             overflow: hidden;
             border: 1px solid #334155;
             transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -72,10 +74,11 @@
         .project-image-holder img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ton image remplira le cadre proprement */
+            object-fit: cover;
         }
 
-        .project-content { padding: 1.5rem; }
+        .project-content { padding: 1.5rem; flex-grow: 1; }
+        
         .badge {
             background: rgba(56, 189, 248, 0.1);
             color: var(--accent);
@@ -88,7 +91,7 @@
         .project-content h3 { margin: 1rem 0 0.5rem 0; color: #fff; }
         .project-content p { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 1rem; }
 
-        .tech-stack { display: flex; gap: 8px; flex-wrap: wrap; }
+        .tech-stack { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
         .tech-stack span {
             background: #334155;
             padding: 2px 8px;
@@ -104,9 +107,9 @@
     <nav>
         <div style="font-weight: bold; color: var(--accent);">KAD.dev</div>
         <ul>
-           <li><a href="index.html" class="active">Accueil</a></li>
+           <li><a href="index.html">Accueil</a></li>
             <li><a href="competences.html">Compétences</a></li>
-            <li><a href="projets.html">Projets</a></li>
+            <li><a href="projets.html" class="active">Projets</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="synthese.html">Tableau de synthèse</a></li>
         </ul>
@@ -117,6 +120,39 @@
 
         <div class="projects-grid">
             
+            <article class="project-card">
+                <div class="project-image-holder">
+                    <img src="res.png" alt="Projet Cybersécurité">
+                </div>
+                <div class="project-content">
+                    <span class="badge">Fil Rouge - SISR</span>
+                    <h3>Sécurisation Applicative & Infrastructure</h3>
+                    <p>Déploiement d'une application PHP vulnérable sur VM Debian. Analyse de risques (SQLi, XSS) et mise en place de contre-mesures : HTTPS, WAF ModSecurity et durcissement réseau.</p>
+                    <div class="tech-stack">
+                        <span>Debian</span>
+                        <span>HTTPS</span>
+                        <span>WAF</span>
+                        <span>PHP/MySQL</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image-holder">
+                    <img src="Capture d'écran 2026-05-06 102033.png" alt="Capture Hackathon Cybersecurity">
+                </div>
+                <div class="project-content">
+                    <span class="badge">Challenge 48h</span>
+                    <h3>Cybersecurity Hackathon 2026</h3>
+                    <p>Challenge intensif de résolution de problématiques de sécurité réseau : pentesting, durcissement système (SSH) et automatisation de détection d'incidents.</p>
+                    <div class="tech-stack">
+                        <span>Cybersecurity</span>
+                        <span>Linux</span>
+                        <span>Scripting</span>
+                    </div>
+                </div>
+            </article>
+
             <article class="project-card">
                 <div class="project-image-holder">
                     <img src="image/pigier.png" alt="Capture Site Pigier">
@@ -131,7 +167,7 @@
 
             <article class="project-card">
                 <div class="project-image-holder">
-                    <img src="img/hydroculture.jpg" alt="Capture Site Hydroculture">
+                    <img src="hy.png" alt="Capture Site Hydroculture">
                 </div>
                 <div class="project-content">
                     <span class="badge">Projet Professionnel</span>
@@ -143,7 +179,7 @@
 
             <article class="project-card">
                 <div class="project-image-holder">
-                    <img src="img/koo2fourchette.jpg" alt="Capture Koo2Fourchette">
+                    <img src="maquette-koo_2_fourchette.png" alt="Capture Koo2Fourchette">
                 </div>
                 <div class="project-content">
                     <span class="badge">EFREI - Full Stack</span>
@@ -167,7 +203,7 @@
 
             <article class="project-card">
                 <div class="project-image-holder">
-                    <img src="img/zabbix.jpg" alt="Capture Supervision">
+                    <img src="images.jpg" alt="Capture Supervision">
                 </div>
                 <div class="project-content">
                     <span class="badge">BTS SIO SISR</span>
