@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | KAD.sisr</title>
+    <style>
+        :root {
+            /* Couleurs extraites de vos captures */
+            --bg-color: #0f172a; 
+            --nav-bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-main: #ffffff;
+            --text-secondary: #94a3b8;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* --- BARRE DE NAVIGATION --- */
+        nav {
+            background-color: var(--nav-bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        /* --- CONTENU PRINCIPAL --- */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        header.page-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        header.page-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        header.page-header p {
+            color: var(--text-secondary);
+        }
+
+        .category {
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .category-title {
+            background: rgba(56, 189, 248, 0.1);
+            padding: 15px 25px;
+            color: var(--accent-color);
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .doc-list {
+            padding: 10px 0;
+        }
+
+        .doc-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            transition: background 0.2s;
+        }
+
+        .doc-item:not(:last-child) {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .doc-item:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .doc-name {
+            display: block;
+            font-weight: 500;
+        }
+
+        .doc-meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .btn-view {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+
+        .btn-view:hover {
+            transform: scale(1.05);
+            background: #7dd3fc;
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 5%; flex-direction: column; gap: 15px; }
+            .doc-item { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .nav-links { font-size: 0.8rem; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">KAD.sisr</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="documentation.html" class="active">Documentation</a></li>
+            <li><a href="synthese.html">Tableau de synthèse</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Documentation technique</h1>
+            <p>Preuves et justificatifs de compétences validés</p>
+        </header>
+
+        <div class="category">
+            <h2 class="category-title">📂 Administration & Support</h2>
+            <div class="doc-list">
+                <div class="doc-item">
+                    <div class="info">
+                        <span class="doc-name">C1 : Support et assistance utilisateur</span>
+                        <span class="doc-meta">Validé le 24/04/2026 à 14:17:08</span>
+                    </div>
+                    <a href="docC1.pdf" class="btn-view">Ouvrir PDF</a>
+                </div>
+                <div class="doc-item">
+                    <div class="info">
+                        <span class="doc-name">C7 : Maintenance du parc (GLPI)</span>
+                        <span class="doc-meta">Validé le 24/04/2026 à 14:17:00</span>
+                    </div>
+                    <a href="GLPI_Documentation_Deploiement.pdf" class="btn-view">Ouvrir PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 class="category-title">📂 Cybersécurité</h2>
+            <div class="doc-list">
+                <div class="doc-item">
+                    <div class="info">
+                        <span class="doc-name">C14 : Sécurisation des données et accès</span>
+                        <span class="doc-meta">Validé le 08/05/2026 à 22:04:50</span>
+                    </div>
+                    <a href="C14.pdf" class="btn-view">Ouvrir PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 class="category-title">📂 Infrastructure & Web</h2>
+            <div class="doc-list">
+                <div class="doc-item">
+                    <div class="info">
+                        <span class="doc-name">C11 : Déploiement et Analytics</span>
+                        <span class="doc-meta">Validé le 24/04/2026 à 14:17:16</span>
+                    </div>
+                    <a href="#" class="btn-view">Ouvrir PDF</a>
+                </div>
+                <div class="doc-item">
+                    <div class="info">
+                        <span class="doc-name">C17 : Configuration de serveurs web</span>
+                        <span class="doc-meta">Validé le 24/04/2026 à 14:17:59</span>
+                    </div>
+                    <a href="Compétence C11.pdf" class="btn-view">Ouvrir PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
